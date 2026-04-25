@@ -39,20 +39,20 @@
     --icon-bg-size: 120%;
     --icon-bg-size1x2: 124%;
 
-    --bg-wallpaperHome: url("/OriginWEB/originData/wallpaper/wallpaper_2.png");
-    --bg-wallpaperLock: url("/OriginWEB/originData/wallpaper/wallpaper_1.png");
+    --bg-wallpaperHome: url("./originData/wallpaper/wallpaper_2.png");
+    --bg-wallpaperLock: url("./originData/wallpaper/wallpaper_1.png");
 
     --bg-colorForBackground: white;
 
     --bg-speedAnimation: 1;
 
-    --bg-colorDark0System: rgb(255, 150, 160);
-    --bg-colorDark1System: rgb(255, 130, 140);
-    --bg-colorDark2System: rgb(255, 110, 120);
-    --bg-colorDark3System: rgb(255, 90, 100);
-    --bg-colorDark4System: rgb(255, 60, 80);
-    --bg-colorDark5System: rgb(255, 40, 60);
-    --bg-colorDark6System: rgb(200, 40, 60);
+    --bg-colorDark0System: rgb(160, 150, 255);
+    --bg-colorDark1System: rgb(140, 130, 255);
+    --bg-colorDark2System: rgb(120, 110, 255);
+    --bg-colorDark3System: rgb(100, 90, 255);
+    --bg-colorDark4System: rgb(80, 60, 255);
+    --bg-colorDark5System: rgb(60, 40, 255);
+    --bg-colorDark6System: rgb(60, 40, 200);
 
     --bg-advancedBlur: 0px;
 

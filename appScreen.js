@@ -669,7 +669,7 @@ function applyIconBackgroundBySize(icon, sizeKey, setForPreviewIcon = false) {
     let imgKey = `image${sizeKey}`;
     let imgKey2 = `support${sizeKey}`;
 
-    let bgKey = `/OriginWEB/originData/iconPacks/${iconType}/`;
+    let bgKey = `./originData/iconPacks/${iconType}/`;
 
     if (!icon.dataset[imgKey]) {
         imgKey = imgKey2;
@@ -782,8 +782,8 @@ async function addApps(
         // For example:
         //  {
         //      support1x1: "1",
-        //      support1x2: "url('/OriginWEB/originData/iconPacks/exquisite_icons/com.android.settings_1x2.png')",
-        //      support2x1: "url('/OriginWEB/originData/iconPacks/exquisite_icons/com.android.settings_2x1.png')",
+        //      support1x2: "url('./originData/iconPacks/exquisite_icons/com.android.settings_1x2.png')",
+        //      support2x1: "url('./originData/iconPacks/exquisite_icons/com.android.settings_2x1.png')",
         //      support2x2: "1"
         //  }
         // If you set it to "1", it will support that extended icon type, but it will use the same icon image, not recommended.
@@ -792,8 +792,8 @@ async function addApps(
     options = {}
 ) {
     const {skipAutoPlace = false} = options;
-    if (getAllIcons().length >= 60) {
-        tb_system("maximum is 60 applications");
+    if (getAllIcons().length >= 80) {
+        tb_system("maximum is 80 applications");
         return;
     }
 

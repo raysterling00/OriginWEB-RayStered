@@ -62,19 +62,19 @@
     border-radius: calc(2 / 3 * var(--bg-borderRadiusIcon));
 }
 .grid2x3 .itemChild .containerPreIcon .icon.app_settings {
-    background: url("/OriginWEB/originData/iconPacks/exquisite_icons/com.android.settings.png") no-repeat center
+    background: url("./originData/iconPacks/exquisite_icons/com.android.settings.png") no-repeat center
         center/var(--icon-bg-size);
 }
 .grid2x3 .itemChild .containerPreIcon .icon.app_files {
-    background: url("/OriginWEB/originData/iconPacks/exquisite_icons/com.android.filemanager.png") no-repeat center
+    background: url("./originData/iconPacks/exquisite_icons/com.android.filemanager.png") no-repeat center
         center/var(--icon-bg-size);
 }
 .grid2x3 .itemChild .containerPreIcon .icon.app_music {
-    background: url("/OriginWEB/originData/iconPacks/exquisite_icons/com.android.bbkmusic.png") no-repeat center
+    background: url("./originData/iconPacks/exquisite_icons/com.android.bbkmusic.png") no-repeat center
         center/var(--icon-bg-size);
 }
 .grid2x3 .itemChild .containerPreIcon .icon.app_calculator {
-    background: url("/OriginWEB/originData/iconPacks/exquisite_icons/com.android.bbkcalculator.png") no-repeat center
+    background: url("./originData/iconPacks/exquisite_icons/com.android.bbkcalculator.png") no-repeat center
         center/var(--icon-bg-size);
 }
 

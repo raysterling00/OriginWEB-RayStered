@@ -54,13 +54,13 @@ function setScrollPointerEvents(enabled) {
 }
 
 function runOpenScript(appId) {
-    removeScript(`/OriginWEB/appData/${appId}/js/close/close.js`);
-    runScript(`/OriginWEB/appData/${appId}/js/open/open.js`);
+    removeScript(`./appData/${appId}/js/close/close.js`);
+    runScript(`./appData/${appId}/js/open/open.js`);
 }
 
 function runCloseScript(appId) {
-    removeScript(`/OriginWEB/appData/${appId}/js/open/open.js`);
-    runScript(`/OriginWEB/appData/${appId}/js/close/close.js`);
+    removeScript(`./appData/${appId}/js/open/open.js`);
+    runScript(`./appData/${appId}/js/close/close.js`);
 }
 
 function cancelStoredAnimation(appEl) {

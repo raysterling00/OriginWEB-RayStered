@@ -139,8 +139,8 @@ frame.classList.add(`${deviceType}Mode`)
 		} else
 			addNotification(
 				"./originData/iconPacks/origin_icon/system_settings.png",
-				"OriginWEB",
-				`Welcome to OriginWEB V${vst}`,
+				"OriginWEB RayStered",
+				`Welcome to OriginWEB R@mayStered V${vst}`,
 				"app_settings"
 			)
 		localStorage.setItem("version", vstt)

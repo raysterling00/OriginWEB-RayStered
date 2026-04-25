@@ -1207,8 +1207,8 @@ function setWallpaperOption(bgImg) {
                 const finalColor = darkerOrBrighterColor(color, 0.5);
                 document.getElementById("colorMediumWallpaperButton").style.backgroundColor = color;
 
-                originColorWallpaperLock = color;
-                darkerColorWallpaperLock = finalColor;
+                originColorWallpaperLock = finalColor;
+                darkerColorWallpaperLock = color;
 
                 document.documentElement.style.setProperty("--bg-colorLockClock", color);
 

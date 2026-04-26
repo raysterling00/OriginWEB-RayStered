@@ -128,7 +128,7 @@ let unlockAnimStyles = {
 	HyperOS: {
 		anim: "anim1",
 		fav: "anim1",
-		duration: 450,
+		duration: 550,
 		easing: "cubic-bezier(.38,1.15,.27,1)",
 		delay: 50,
 		delayEasing: 25,

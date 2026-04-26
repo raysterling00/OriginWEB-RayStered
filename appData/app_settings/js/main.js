@@ -135,12 +135,42 @@ const functionWhenOpenAppInApp_settings = {
 			fileInput.handler = function () {
 				const file = fileInput.files[0]
 				if (!file) return
-				const reader = new FileReader()
+				/*const reader = new FileReader()
 				reader.onload = () => {
 					const base64 = reader.result
 					const urlWallpaper = `url('${base64}')`
 					localStorage.setItem("wallpaper", urlWallpaper)
 					setWallpaperOption(urlWallpaper)
+				}
+				reader.readAsDataURL(file)*/
+
+				const reader = new FileReader()
+				reader.onload = (ev) => {
+					const img = new Image()
+
+					img.onload = () => {
+						const canvas = document.createElement("canvas")
+						const maxW = 720
+						const scale = maxW / img.width
+
+						canvas.width = maxW
+						canvas.height = img.height * scale
+
+						const ctx = canvas.getContext("2d")
+						ctx.drawImage(img, 0, 0, canvas.width, canvas.height)
+
+						const compressed = canvas.toDataURL("image/jpeg", 0.75)
+						
+						const urlWallpaper = `url('${compressed}')`
+						
+						try {
+						localStorage.setItem("wallpaper", urlWallpaper)
+						setWallpaperOption(urlWallpaper)
+						} catch (e) {
+							console.log("error with execution of wallpaper or quota exceeded: \n"+e)
+						}
+					}
+					img.src = ev.target.result;
 				}
 				reader.readAsDataURL(file)
 			}

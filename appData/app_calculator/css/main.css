@@ -50,14 +50,14 @@
   background: #e0e0e0;
 }
 .orange_calc {
-  background: #fbc4ab;
-  color: #d84315;
+  background: rgb(80, 60, 255);
+  color: black;
 }
 .equal_calc {
-  background: #f0625d;
+  background: rgb(20, 10, 200);
   color: white;
   font-weight: bold;
 }
 .gray_calc {
-  color: #d84315;
+  color: rgb(40, 10, 255);
 }

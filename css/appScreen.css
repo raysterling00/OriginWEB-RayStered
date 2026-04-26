@@ -779,7 +779,7 @@
     background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url("./originData/iconPacks/flat_icons/dynamic_icon/com.android.BBKClock/clock_dial_center_1x1.png");
+    background-image: url("/OriginWeb-RayStered/originData/iconPacks/flat_icons/dynamic_icon/com.android.BBKClock/clock_dial_center_1x1.png");
     height: 100%;
     width: 100%;
     pointer-events: none;
@@ -796,12 +796,12 @@
     scale: 1.2;
 }
 .iconApp .dynamicIcon.clock::after {
-    background-image: url("./originData/iconPacks/flat_icons/dynamic_icon/com.android.BBKClock/clock_hour.png");
+    background-image: url("/OriginWeb-RayStered/originData/iconPacks/flat_icons/dynamic_icon/com.android.BBKClock/clock_hour.png");
     transform: rotate(180deg);
     rotate: 105deg;
 }
 .iconApp .dynamicIcon.clock::before {
-    background-image: url("./originData/iconPacks/flat_icons/dynamic_icon/com.android.BBKClock/clock_minute.png");
+    background-image: url("/OriginWeb-RayStered/originData/iconPacks/flat_icons/dynamic_icon/com.android.BBKClock/clock_minute.png");
     rotate: 180deg;
 }
 .iconApp[data-size="2x2"] .dynamicIcon.clock::before,

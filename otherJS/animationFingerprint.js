@@ -59,19 +59,19 @@ async function loadFpAnim(onSuccess = function () {}) {
     }
 
     await preload(
-        `./originData/animationFingerprint/${ani_fingerprint_type}`,
+        `/OriginWeb-RayStered/originData/animationFingerprint/${ani_fingerprint_type}`,
         "kgd_fingerprint_element",
         60,
         KGD_CACHE.fingerprint
     );
     await preload(
-        `./originData/animationFingerprint/${ani_fadein_fingerprint_type}`,
+        `/OriginWeb-RayStered/originData/animationFingerprint/${ani_fadein_fingerprint_type}`,
         "kgd_osfingerprint_fadein",
         24,
         KGD_CACHE.fadein
     );
     await preload(
-        `./originData/animationFingerprint/${ani_fadeout_fingerprint_type}`,
+        `/OriginWeb-RayStered/originData/animationFingerprint/${ani_fadeout_fingerprint_type}`,
         "kgd_osfingerprint_fadeout",
         23,
         KGD_CACHE.fadeout

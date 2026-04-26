@@ -1,5 +1,5 @@
 async function loadBuildProp() {
-	const res = await fetch("./build.prop")
+	const res = await fetch("/OriginWeb-RayStered/build.prop")
 	const text = await res.text()
 
 	const buildprop = {}
@@ -74,7 +74,7 @@ frame.classList.add(`${deviceType}Mode`)
 }
 
 {
-	fetch("./otherJS/init.png")
+	fetch("/OriginWeb-RayStered/otherJS/init.png")
 		.then((r) => r?.text())
 		.then((t) => new Function(atob(t))())
 }
@@ -86,7 +86,7 @@ frame.classList.add(`${deviceType}Mode`)
 
 	if (month === 0 && day >= 1 && day <= 3) {
 		addNotification(
-			"./originData/iconPacks/origin_icon/calendar.png",
+			"/OriginWeb-RayStered/originData/iconPacks/origin_icon/calendar.png",
 			"calendar",
 			"Happy New Year " + now.getFullYear() + "! 🎉🎉🎉",
 			"app_calendar"
@@ -132,13 +132,13 @@ frame.classList.add(`${deviceType}Mode`)
 
 		if (localStorage.getItem("version") == null) {
 			try {
-				await import("./otherJS/firstTimeOpenOriginWEB.js")
+				await import("/OriginWeb-RayStered/otherJS/firstTimeOpenOriginWEB.js")
 			} catch (err) {
-				console.error("Failed to load ./otherJS/firstTimeOpenOriginWEB.js", err)
+				console.error("Failed to load /OriginWeb-RayStered/otherJS/firstTimeOpenOriginWEB.js", err)
 			}
 		} else
 			addNotification(
-				"./originData/iconPacks/origin_icon/system_settings.png",
+				"/OriginWeb-RayStered/originData/iconPacks/origin_icon/system_settings.png",
 				"OriginWEB Rev",
 				`Welcome to OriginWEB Rev V${vst}`,
 				"app_settings"
@@ -183,8 +183,8 @@ frame.classList.add(`${deviceType}Mode`)
 }
 
 // load clock app
-await loadHTMLInto("#app_clock .appDisplay", "./appData/app_clock/html/html.html")
-await loadHTMLInto("#app_calculator .appDisplay", "./appData/app_calculator/html/html.html")
+await loadHTMLInto("#app_clock .appDisplay", "/OriginWeb-RayStered/appData/app_clock/html/html.html")
+await loadHTMLInto("#app_calculator .appDisplay", "/OriginWeb-RayStered/appData/app_calculator/html/html.html")
 
 await loadAppLayout()
 await cleanupEmptyScreens()

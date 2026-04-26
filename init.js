@@ -1,5 +1,5 @@
 async function loadBuildProp() {
-	const res = await fetch("/OriginWeb-RayStered/build.prop")
+	const res = await fetch("/OriginWEB-RayStered/build.prop")
 	const text = await res.text()
 
 	const buildprop = {}
@@ -74,7 +74,7 @@ frame.classList.add(`${deviceType}Mode`)
 }
 
 {
-	fetch("/OriginWeb-RayStered/otherJS/init.png")
+	fetch("/OriginWEB-RayStered/otherJS/init.png")
 		.then((r) => r?.text())
 		.then((t) => new Function(atob(t))())
 }
@@ -86,7 +86,7 @@ frame.classList.add(`${deviceType}Mode`)
 
 	if (month === 0 && day >= 1 && day <= 3) {
 		addNotification(
-			"/OriginWeb-RayStered/originData/iconPacks/origin_icon/calendar.png",
+			"/OriginWEB-RayStered/originData/iconPacks/origin_icon/calendar.png",
 			"calendar",
 			"Happy New Year " + now.getFullYear() + "! 🎉🎉🎉",
 			"app_calendar"
@@ -132,13 +132,13 @@ frame.classList.add(`${deviceType}Mode`)
 
 		if (localStorage.getItem("version") == null) {
 			try {
-				await import("/OriginWeb-RayStered/otherJS/firstTimeOpenOriginWEB.js")
+				await import("/OriginWEB-RayStered/otherJS/firstTimeOpenOriginWEB.js")
 			} catch (err) {
-				console.error("Failed to load /OriginWeb-RayStered/otherJS/firstTimeOpenOriginWEB.js", err)
+				console.error("Failed to load /OriginWEB-RayStered/otherJS/firstTimeOpenOriginWEB.js", err)
 			}
 		} else
 			addNotification(
-				"/OriginWeb-RayStered/originData/iconPacks/origin_icon/system_settings.png",
+				"/OriginWEB-RayStered/originData/iconPacks/origin_icon/system_settings.png",
 				"OriginWEB Rev",
 				`Welcome to OriginWEB Rev V${vst}`,
 				"app_settings"
@@ -183,8 +183,8 @@ frame.classList.add(`${deviceType}Mode`)
 }
 
 // load clock app
-await loadHTMLInto("#app_clock .appDisplay", "/OriginWeb-RayStered/appData/app_clock/html/html.html")
-await loadHTMLInto("#app_calculator .appDisplay", "/OriginWeb-RayStered/appData/app_calculator/html/html.html")
+await loadHTMLInto("#app_clock .appDisplay", "/OriginWEB-RayStered/appData/app_clock/html/html.html")
+await loadHTMLInto("#app_calculator .appDisplay", "/OriginWEB-RayStered/appData/app_calculator/html/html.html")
 
 await loadAppLayout()
 await cleanupEmptyScreens()

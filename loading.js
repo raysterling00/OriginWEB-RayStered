@@ -11,9 +11,9 @@ let originDeviceType
 window.addEventListener("DOMContentLoaded", async () => {
 	// Run init.js as module
 	try {
-		await import("/OriginWeb-RayStered/init.js")
+		await import("/OriginWEB-RayStered/init.js")
 	} catch (err) {
-		console.error("Failed to load /OriginWeb-RayStered/init.js", err)
+		console.error("Failed to load /OriginWEB-RayStered/init.js", err)
 	}
 })
 function formatSize(bytes) {

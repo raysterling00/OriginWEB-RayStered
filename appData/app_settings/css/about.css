@@ -16,7 +16,7 @@
     width: calc(100% - 40px);
     aspect-ratio: 1248 / 1848;
     max-width: 300px;
-    background: url("./originData/OriginOS6ocean.webp") no-repeat center center/cover;
+    background: url("/OriginWEB-RayStered/originData/OriginOS6ocean.webp") no-repeat center center/cover;
     transition: scale 0.4s, opacity 0.15s;
 }
 #OriginOSocean:active {

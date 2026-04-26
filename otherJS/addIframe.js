@@ -42,7 +42,7 @@ async function loadHTMLInto(divSelector, htmlFile, htmlText) {
 
     iframe.onload = async () => {
         try {
-            let cssText = await fetch("./root.css").then((r) => r.text());
+            let cssText = await fetch("/OriginWEB-RayStered/root.css").then((r) => r.text());
             cssText += `:root {
                             --bg-itemBackground: rgb(23, 23, 23) ;
                             --bg-appbackground: rgb(0, 0, 0) ;

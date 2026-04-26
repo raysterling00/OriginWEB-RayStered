@@ -78,7 +78,7 @@ fold.2ndScreen.width=540
 fold.height=627
 fold.width=270
 
-fold.borderRadius=10px
+fold.borderRadius=15px
 
 fold.button.width=3px
 fold.borderInside.size=12px

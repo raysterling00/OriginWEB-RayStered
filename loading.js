@@ -1,7 +1,7 @@
 const root = document.documentElement
 const rootStyle = getComputedStyle(root)
-let vst = "1.0.40",
-	vstt = "1040"
+let vst = "26.04",
+	vstt = "2604"
 
 let buildProp = {}
 

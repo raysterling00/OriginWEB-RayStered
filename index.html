@@ -11,6 +11,11 @@
 		<fontCss>
 			<link href="https://fonts.googleapis.com/css2?family=Fredoka&display=swap" rel="stylesheet" />
 			<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;300;400&display=swap" rel="stylesheet" />
+			<link rel="preconnect" href="https://fonts.googleapis.com">
+			<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+			<link href="https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@0,100..900;1,100..900&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+			<link href="https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@0,100..900;1,100..900&family=BJCree:wght@400;500;600;700&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+			
 			<link href="https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap" rel="stylesheet" />
 			<link href="https://fonts.googleapis.com/css2?family=Gloock&display=swap" rel="stylesheet" /><link
 				href="https://fonts.googleapis.com/css2?family=Alumni+Sans:ital,wght@0,100..900;1,100..900&display=swap"
@@ -60,7 +65,7 @@
                 </div>
             </div>-->
 			<div class="webName" style="transform: translateY(20px) scale(1.5)">RevUI</div>
-			<div class="version" version-text>V</div>
+			<div class="version" version-text> >V</div>
 			<div class="loadingLogo">
 				<div class="lds-ellipsis">
 					<div></div>
@@ -750,13 +755,13 @@
 											</div>
 
 											<div class="selectBoxs">
-												<div class="itemChild active" data-value="OriginOS">OriginOS</div>
-												<div class="itemChild" data-value="ColorOS">ColorOS</div>
-												<div class="itemChild" data-value="HyperOS">HyperOS</div>
-												<div class="itemChild" data-value="HarmonyOS">HarmonyOS</div>
-												<div class="itemChild" data-value="OneUI6">OneUI 6</div>
-												<div class="itemChild" data-value="OneUI7">OneUI 7</div>
-												<div class="itemChild" data-value="customAnim" data-hiddenByDev="1">animation 1</div>
+												<div class="itemChild active" data-value="OriginOS">Default</div>
+												<div class="itemChild" data-value="ColorOS">Static</div>
+												<div class="itemChild" data-value="HyperOS">Bounce</div>
+												<div class="itemChild" data-value="HarmonyOS">Inverse</div>
+												<div class="itemChild" data-value="OneUI6">Zoom Out</div>
+												<div class="itemChild" data-value="OneUI7">Zoom In</div>
+												<div class="itemChild" data-value="customAnim" data-hiddenByDev="1">custom</div>
 											</div>
 										</div>
 									</div>
@@ -1040,6 +1045,12 @@
 												<div
 													class="itemChild phonePreview small"
 													style="background-image: url(&quot;/OriginWEB-RayStered/originData/wallpaper/wallpaper_5.png&quot;)"></div>
+												<div
+													class="itemChild phonePreview small"
+													style="background-image: url(&quot;/OriginWEB-RayStered/originData/wallpaper/wallpaper_6.png&quot;)"></div>
+												<div
+													class="itemChild phonePreview small"
+													style="background-image: url(&quot;/OriginWEB-RayStered/originData/wallpaper/wallpaper_7.png&quot;)"></div>
 											</div>
 										</div>
 										<div class="settingsItem brTop brBottom sortYForFlex noActiveAnim">
@@ -1077,6 +1088,26 @@
 												<div
 													class="itemChild phonePreview small"
 													style="background-image: url(&quot;/OriginWEB-RayStered/originData/wallpaper/coloros15/wallpaper_9.png&quot;)"></div>
+											</div>
+										</div>
+										<div class="settingsItem brTop brBottom sortYForFlex noActiveAnim">
+											<h4>Sand Mountains</h4>
+											<div class="horizontalScroll">
+												<div
+													class="itemChild phonePreview small"
+													style="background-image: url(&quot;/OriginWEB-RayStered/originData/wallpaper/coloros15/wallpaper_10.jpg&quot;)"></div>
+												<div
+													class="itemChild phonePreview small"
+													style="background-image: url(&quot;/OriginWEB-RayStered/originData/wallpaper/coloros15/wallpaper_11.jpg&quot;)"></div>
+												<div
+													class="itemChild phonePreview small"
+													style="background-image: url(&quot;/OriginWEB-RayStered/originData/wallpaper/coloros15/wallpaper_12.jpg&quot;)"></div>
+												<div
+													class="itemChild phonePreview small"
+													style="background-image: url(&quot;/OriginWEB-RayStered/originData/wallpaper/coloros15/wallpaper_13.jpg&quot;)"></div>
+												<div
+													class="itemChild phonePreview small"
+													style="background-image: url(&quot;/OriginWEB-RayStered/originData/wallpaper/coloros15/wallpaper_14.jpg&quot;)"></div>
 											</div>
 										</div>
 									</div>
@@ -1166,7 +1197,7 @@
 											</div>
 										</div>
 										<div class="settingsItem brBottom">
-											<div class="settingsText marginLeft">Don't show text</div>
+											<div class="settingsText marginLeft">Hide app name</div>
 											<div class="toggleBtn" id="toggle_hideIconText"></div>
 										</div>
 									</div>
@@ -1378,7 +1409,7 @@
 										</div>
 
 										<div class="settingsItem brTop">
-											<div class="settingsText marginLeft">lock screen password</div>
+											<div class="settingsText marginLeft">Lock screen password</div>
 											<div class="toggleBtn" id="toggle_lockScreenPassword"></div>
 										</div>
 										<div class="settingsItem brBottom notWork" notWorkBy="toggle_lockScreenPassword" name="changePwBtn">
@@ -1411,19 +1442,19 @@
 										class="itemChild padding5_9 liquid"
 										data-appForCameraBtn="app_camera"
 										data-path="M479.65-258q76.24 0 128.3-51.67Q660-361.33 660-437.2q0-76.03-52.17-128.41Q555.66-618 479.75-618q-76.58 0-128.17 52.33Q300-513.34 300-437.2q0 76.03 51.65 127.62 51.64 51.58 128 51.58Zm.1-90q-38.42 0-64.08-25.62Q390-399.24 390-437.46q0-38.87 25.72-65.04 25.71-26.17 64.16-26.17 37.79 0 64.29 25.83 26.5 25.83 26.5 65 0 38.51-26.19 64.17Q518.29-348 479.75-348ZM156.67-90.67q-43.83 0-74.92-31.08-31.08-31.09-31.08-74.92v-482q0-43.85 31.08-75.26 31.09-31.4 74.92-31.4H272L357-870h246.67l85.66 84.67h114q43.86 0 75.27 31.4 31.4 31.41 31.4 75.26v482q0 43.83-31.4 74.92-31.41 31.08-75.27 31.08H156.67Z">
-										camera
+										Camera
 									</div>
 									<div
 										class="itemChild padding5_9 liquid"
 										data-appForCameraBtn="app_calculator"
 										data-path="M320.67-236.33h54V-322h85.66v-54h-85.66v-85.67h-54V-376H235v54h85.67v85.67Zm200.66-33.34H723V-324H521.33v54.33Zm0-105H723v-54H521.33v54Zm-273-226h198.34v-54H248.33v54Zm-51.66 510q-43.83 0-74.92-31.08-31.08-31.09-31.08-74.92v-566.66q0-44.1 31.08-75.39Q152.84-870 196.67-870h566.66q44.1 0 75.39 31.28Q870-807.43 870-763.33v566.66q0 43.83-31.28 74.92-31.29 31.08-75.39 31.08H196.67ZM561-524l58.83-59.33L680-524l38-38.67L658.33-623 718-682.67l-38-38L620.33-661 561-720.67l-39 38L581.67-623 522-562.67 561-524Z">
-										calculator
+										Calculator
 									</div>
 									<div
 										class="itemChild padding5_9 liquid"
 										data-appForCameraBtn="app_dialer"
 										data-path="M161.67-90.67q-29.34 0-50-20.33Q91-131.33 91-161.67v-152q0-31.33 17-51.66 17-20.34 48.33-29.67L262-419.33q26-6 47.5.33t39.17 24.67l102 100q30.33-17 60.66-40.34Q541.67-358 573-390.33q28.67-28.67 53.83-58.84Q652-479.33 671-511.67l-104-94q-17-14-22.5-35.5T542-690l27-114q6.67-32 27.83-49Q618-870 651-870h148.33q30.34 0 50.5 20.67 20.17 20.66 20.17 51 0 124.66-58.5 252.66T646.67-312.33Q541-207 414.5-148.83 288-90.67 161.67-90.67Z">
-										dialer
+										AI
 									</div>
 									<div
 										class="itemChild padding5_9 liquid"
@@ -1567,11 +1598,11 @@
 								</div>
 								<div class="space"></div>
 								<div class="horizontalScroll">
-									<div class="fontCircle" style="font-family: &quot;gf_Roboto_Flex variant0&quot;, sans-serif">12</div>
+									<div class="fontCircle" style="font-family: &quot;Montserrat&quot;, sans-serif">12</div>
 									<div class="fontCircle" style="font-family: &quot;Gloock&quot;, serif">12</div>
-									<div class="fontCircle" style="font-family: &quot;noto sans&quot;, sans-serif">12</div>
-									<div class="fontCircle" style="font-family: &quot;Leckerli One&quot;, cursive">12</div>
-									<div class="fontCircle" style="font-family: &quot;Fredoka&quot;, sans-serif">12</div>
+									<div class="fontCircle" style="font-family: &quot;Google Sans&quot;, sans-serif">12</div>
+									<div class="fontCircle" style="font-family: &quot;Advent Pro&quot;, sans-serif">12</div>
+									<div class="fontCircle" style="font-family: &quot;BJCree&quot;, sans-serif">12</div>
 									<div class="fontCircle" style="font-family: &quot;Bitcount Single&quot;, system-ui">12</div>
 								</div>
 
@@ -2299,7 +2330,7 @@
 				<div class="left">
 					<div class="itemStatus" id="itemStatusLeft">
 						<div class="clockMain" id="statusClock">10:00</div>
-						<div id="networkName">No SIM</div>
+						<div id="networkName">Insert SIM</div>
 					</div>
 				</div>
 
@@ -2324,7 +2355,7 @@
 							<div class="containerBattery">
 								<div class="batteryLevel"></div>
 							</div>
-							<div class="batteryNum">100</div>
+							<div class="batteryNum">101</div>
 						</div>
 					</div>
 				</div>

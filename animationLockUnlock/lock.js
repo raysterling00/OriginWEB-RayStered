@@ -2,6 +2,9 @@ let AllAnimUnlock = {}
 let AllAnimUnlockForFavApp = {
 	specialForOriginOS: {
 		favApp: "translateX(0) translateY(120%) scale(1)"
+	},
+	revUIFav : {
+		favApp: "translateX(0) translateY(110%) scale(1)"
 	}
 }
 
@@ -114,41 +117,45 @@ async function createCustomUnlockAnim(
 		//console.log(output);
 	}
 }
+/*
+function rndm(multiplier) {
+	return Math.random() * multiplier
+}*/
 
 let unlockAnimStyles = {
 	ColorOS: {
 		anim: "anim1",
 		fav: "anim1",
-		duration: 600,
+		duration: 800,
 		easing: "cubic-bezier(.3,1.15,.2,1)",
-		delay: 32,
-		delayEasing: 11,
+		delay: 40,
+		delayEasing: 40,
 		group: "anim0"
 	},
 	HyperOS: {
 		anim: "anim1",
-		fav: "anim1",
-		duration: 550,
-		easing: "cubic-bezier(.38,1.15,.27,1)",
-		delay: 50,
-		delayEasing: 25,
+		fav: "specialForOriginOS",
+		duration: 690 /*Math.max(Math.random()*700, 300)*/ /*Math.max(rndm(700), 300)*/,
+		easing: "cubic-bezier(.17245,1.375,.325,1.02)",
+		delay: 80,
+		delayEasing: 20,
 		group: "anim0",
 		filter: () => `blur(${rootStyle.getPropertyValue("--bg-advancedBlur").toString()})`
 	},
 	OriginOS: {
 		anim: "anim0",
 		fav: "specialForOriginOS",
-		duration: 500,
-		easing: "cubic-bezier(.38,1.13,.05,1)",
-		delay: 35,
-		delayEasing: 20,
+		duration: 760,
+		easing: "cubic-bezier(.5,0.9751,.05,1)",
+		delay: 85,
+		delayEasing: 40,
 		group: "anim5"
 	},
 	HarmonyOS: {
 		anim: "anim2",
-		fav: "anim2",
+		fav: "specialForOriginOS",
 		duration: 500,
-		easing: "cubic-bezier(0.4, 1.17, 0.2, 1)",
+		easing: "cubic-bezier(0.6, 1.15, 0.2, 1)",
 		delay: 40,
 		delayEasing: 17,
 		group: "anim1"
@@ -157,7 +164,7 @@ let unlockAnimStyles = {
 		anim: "anim3",
 		fav: "anim3",
 		duration: 450,
-		easing: "ease",
+		easing: "ease-in-out",
 		delay: 0,
 		delayEasing: 0,
 		group: "anim4"
@@ -304,7 +311,7 @@ function createAllAnimations(ROWS, COLS) {
 	return {
 		anim0: groupByDistance(50, 30, false),
 		anim1: groupByDistance(50, 30, false),
-		anim2: groupByDistance(0, 0, false),
+		anim2: groupByDistance(10, 0, false),
 		anim3: groupByDistance(100, 50, false),
 		anim4: [
 			{
@@ -480,9 +487,9 @@ async function reloadAppscreenAnimWA(script = () => {}, currentAppScreenTmp = cu
 		anim: "reloadAnim",
 		fav: "reloadAnim",
 		duration: 500,
-		easing: "cubic-bezier(0.4, 1.17, 0.2, 1)",
+		easing: "cubic-bezier(0.4, 1.3, 0.2, 1)",
 		delay: 40,
-		delayEasing: 17,
+		delayEasing: 20,
 		group: "anim1"
 	}
 	if (!cfg) return
@@ -634,8 +641,7 @@ async function reloadAppscreenAnimWA(script = () => {}, currentAppScreenTmp = cu
 		})
 	})
 
-	const delay =
-		(localGroupUnlockAnim.length - 1) * localDelayForUnlockAnim - (localGroupUnlockAnim.length - 1) * localDelayEasingForUnlockAnim
+	const delay = (localGroupUnlockAnim.length - 1) * localDelayForUnlockAnim - (localGroupUnlockAnim.length - 1) * localDelayEasingForUnlockAnim
 
 	Object.entries(localTransformUnlockAnimForFavApp).forEach(([key, value]) => {
 		const el = document.getElementById(key)

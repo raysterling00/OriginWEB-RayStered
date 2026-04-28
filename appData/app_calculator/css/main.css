@@ -1,63 +1,63 @@
 .calculator_calc {
-  width: 320px;
-  padding: 20px;
+	width: 320px;
+	padding: 20px;
 }
 .display_calc {
-  position: absolute;
-  top: 150px;
-  height: 90px;
-  width: 70%;
-  text-align: right;
-  padding: 15px;
-  font-size: 2rem;
-  border-radius: 10px;
-  margin-bottom: 20px;
-  overflow-x: auto;
-  font-weight: 800;
-  font-family: "Lato", sans-serif;
-  color: white;
+	position: absolute;
+	top: 150px;
+	height: 90px;
+	width: 70%;
+	text-align: right;
+	padding: 15px;
+	font-size: 2rem;
+	border-radius: 10px;
+	margin-bottom: 20px;
+	overflow-x: auto;
+	font-weight: 800;
+	font-family: "Google Sans", sans-serif;
+	color: white;
 }
 .buttons_calc {
-  position: absolute;
-  top: 280px;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 12px;
+	position: absolute;
+	top: 280px;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 12px;
 }
 
 .buttons_calc_preview {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 12px;
-  scale: 0.4;
-  position: absolute;
-  top: 0px;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 12px;
+	scale: 0.4;
+	position: absolute;
+	top: 0px;
 }
 .btn_calc {
-  border: none;
-  border-radius: 50%;
-  height: 60px;
-  width: 60px;
-  font-size: 1.4rem;
-  cursor: pointer;
-  background: #f3f3f3;
-  transition: background 0.2s;
-  font-weight: 800;
-  font-family: "Lato", sans-serif;
-  color: #353535;
+	border: none;
+	border-radius: 50%;
+	height: 60px;
+	width: 60px;
+	font-size: 1.4rem;
+	cursor: pointer;
+	background: #f3f3f3;
+	transition: background 0.2s;
+	font-weight: 800;
+	font-family: "Lato", sans-serif;
+	color: #353535;
 }
 .btn_calc:hover {
-  background: #e0e0e0;
+	background: #e0e0e0;
 }
 .orange_calc {
-  background: rgb(80, 60, 255);
-  color: black;
+	background: rgb(80, 60, 255);
+	color: black;
 }
 .equal_calc {
-  background: rgb(20, 10, 200);
-  color: white;
-  font-weight: bold;
+	background: rgb(20, 10, 200);
+	color: white;
+	font-weight: bold;
 }
 .gray_calc {
-  color: rgb(40, 10, 255);
+	color: rgb(40, 10, 255);
 }

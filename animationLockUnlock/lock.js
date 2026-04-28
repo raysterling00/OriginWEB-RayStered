@@ -1,10 +1,10 @@
 let AllAnimUnlock = {}
 let AllAnimUnlockForFavApp = {
-	specialForOriginOS: {
+	revUIFav: {
 		favApp: "translateX(0) translateY(120%) scale(1)"
 	},
-	revUIFav : {
-		favApp: "translateX(0) translateY(110%) scale(1)"
+	specialForOriginOS: {
+		favApp: "translateX(0) translateY(120%) scale(1)"
 	}
 }
 
@@ -134,12 +134,12 @@ let unlockAnimStyles = {
 	},
 	HyperOS: {
 		anim: "anim1",
-		fav: "specialForOriginOS",
-		duration: 690 /*Math.max(Math.random()*700, 300)*/ /*Math.max(rndm(700), 300)*/,
-		easing: "cubic-bezier(.17245,1.375,.325,1.02)",
-		delay: 80,
-		delayEasing: 20,
-		group: "anim0",
+		fav: "anim3",
+		duration: 700 /*Math.max(Math.random()*700, 300)*/ /*Math.max(rndm(700), 300)*/,
+		easing: "cubic-bezier(.187245,1.275,.3325,1.02)",
+		delay: 110,
+		delayEasing: 25,
+		group: "anim1",
 		filter: () => `blur(${rootStyle.getPropertyValue("--bg-advancedBlur").toString()})`
 	},
 	OriginOS: {

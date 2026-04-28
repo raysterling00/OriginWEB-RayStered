@@ -471,9 +471,7 @@ scrollAppScreen.scrollBy({ left: -10, behavior: "smooth" })
 		const activeItem = document.querySelector(`[data-appforcamerabtn='${item}']`)
 		if (activeItem) activeItem.classList.add("active")
 
-		document
-			.querySelector("#app_SettingsAppActionBtn .box .borderPhonePre .buttonPreview svg path")
-			.setAttribute("d", activeItem.dataset.path)
+		document.querySelector("#app_SettingsAppActionBtn .box .borderPhonePre .buttonPreview svg path").setAttribute("d", activeItem.dataset.path)
 	}
 }
 {
@@ -555,7 +553,7 @@ async function loadUnlockUnlockAnim() {
 			}
 		})
 	} else {
-		const unlockAnimation = "OriginOS"
+		const unlockAnimation = "HyperOS"
 		changeUnlockAnimStyle(unlockAnimation)
 		const selectUnlockAnimation = document.querySelector("#app_SettingsAppAnimation .select[name='unlockAnimation']")
 		const selectBoxs = selectUnlockAnimation.querySelector(".selectBoxs")
@@ -792,6 +790,9 @@ async function tndScreenBtnClickCore(tndScreenBtn) {
 
 		AllAnimUnlock = {}
 		AllAnimUnlockForFavApp = {
+			revUIFav: {
+				favApp: "translateX(0) translateY(120%) scale(1)"
+			},
 			specialForOriginOS: {
 				favApp: "translateX(0) translateY(120%) scale(1)"
 			}
@@ -837,6 +838,9 @@ async function tndScreenBtnClickCore(tndScreenBtn) {
 		{
 			AllAnimUnlock = {}
 			AllAnimUnlockForFavApp = {
+				revUIFav: {
+					favApp: "translateX(0) translateY(120%) scale(1)"
+				},
 				specialForOriginOS: {
 					favApp: "translateX(0) translateY(120%) scale(1)"
 				}
@@ -894,6 +898,9 @@ async function tndScreenBtnClickCore(tndScreenBtn) {
 async function initUnlockAnim() {
 	AllAnimUnlock = {}
 	AllAnimUnlockForFavApp = {
+		revUIFav: {
+			favApp: "translateX(0) translateY(120%) scale(1)"
+		},
 		specialForOriginOS: {
 			favApp: "translateX(0) translateY(120%) scale(1)"
 		}

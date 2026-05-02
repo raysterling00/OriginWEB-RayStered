@@ -729,7 +729,7 @@ let allWallpaperOffStyle = {
 			width: "calc(100% - 50px)",
 			translate: "0 00%",
 			borderRadius: "calc(0.06px * var(--bg-widthPhone))",
-			scale: "0.95",
+			scale: "0.825",
 			bottom: "50px"
 		},
 		bottomBtn: { opacity: "0" },
@@ -740,7 +740,7 @@ let allWallpaperOffStyle = {
 	2: {
 		wallpaperLock: {
 			bottom: "0px",
-			scale: "1.1",
+			scale: "1.15",
 			opacity: "0.8",
 			height: "100%",
 			width: "100%",

@@ -11,7 +11,7 @@ let AllAnimUnlockForFavApp = {
 transformUnlockAnim = AllAnimUnlock.anim1
 transformUnlockAnimForFavApp = AllAnimUnlockForFavApp.anim3
 durationForUnlockAnim = 600 * speed
-easingForUnlockAnim = "cubic-bezier(.35,1.29,.33,1)"
+easingForUnlockAnim = "cubic-bezier(.35,1.29,.36,1)"
 delayForUnlockAnim = 25 * speed
 delayEasingForUnlockAnim = 5
 let filterForUnlockAnim = ""
@@ -1049,7 +1049,7 @@ function pointerup_scrollLockScreenToUnlock(e) {
 	let speed = Math.abs(velocity_lock)
 
 	// Điều kiện: đủ cao (vuốt lên > 80px) và đủ nhanh (trên 0.5 px/ms)
-	if (deltaY < -80 && speed > 0.5) {
+	if (deltaY < -60 && speed > 0.5) {
 		scaleForOff.style.transform = ""
 		showPasswordScreen(hiddenLockScreen)
 	} else {

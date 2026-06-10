@@ -1,0 +1,25 @@
+
+/*:root {
+	/* Valores por defecto (se actualizarán dinámicamente) */
+	/*--theme-primary: #13bba4;
+	--theme-app-bg: #1e1e1e;
+	--theme-surface: #2a2a2a;
+	--theme-on-primary: #ffffff;
+	--theme-on-surface: #e3e3e3;
+}
+
+/* Ejemplo de cómo deberían usarlo tus apps en el CSS */
+/*.app {
+	background-color: var(--theme-app-bg);
+	color: var(--theme-on-surface);
+}
+
+.button-accent {
+	background-color: var(--theme-primary);
+	color: var(--theme-on-primary);
+}
+*/
+
+.lockClock{
+	color: var(--bg-colorLockClock) !important;
+}

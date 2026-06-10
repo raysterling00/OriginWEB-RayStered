@@ -73,10 +73,30 @@ frame.classList.add(`${deviceType}Mode`)
 	allGroupUnlockAnim = await (async () => createAllAnimations(ROWS, COLS))()
 }
 
-{
+/*{
 	fetch("/OriginWEB-RayStered/otherJS/init.png")
 		.then((r) => r?.text())
 		.then((t) => new Function(atob(t))())
+}*/
+
+{
+	// Decoded "init.png" file
+
+	vst = "26.05"
+	vstt = "2605"
+	{
+		const vst = "26.05",
+			vstt = "2605"
+		const vsts = document.querySelectorAll("[version-text]")
+		vsts.forEach((el) => {
+			el.textContent += vst
+		})
+	}
+	document.querySelectorAll("#name_dev").textContent = "TikTok: @sungsamtech"
+	document.querySelectorAll("[hkSkBb]").textContent = "TikTok: @sungsamtech"
+	document.querySelectorAll("[adDs-a]").textContent = "TikTok: @sungsamtech"
+	document.querySelectorAll("[bmFtZWRldg]").textContent = "TikTok: @sungsamtech"
+	document.querySelectorAll("[sccScc]").textContent = "TikTok: @sungsamtech"
 }
 
 {
@@ -140,7 +160,7 @@ frame.classList.add(`${deviceType}Mode`)
 			addNotification(
 				"/OriginWEB-RayStered/originData/iconPacks/origin_icon/system_settings.png",
 				"OriginWEB Rev",
-				`Welcome to OriginWEB Rev V${vst}`,
+				`Welcome to OriWEB RevUi V${vst}`,
 				"app_settings"
 			)
 		localStorage.setItem("version", vstt)

@@ -138,7 +138,7 @@ let unlockAnimStyles = {
 		duration: 700 /*Math.max(Math.random()*700, 300)*/ /*Math.max(rndm(700), 300)*/,
 		easing: "cubic-bezier(.187245,1.275,.3325,1.02)",
 		delay: 110,
-		delayEasing: 25,
+		delayEasing: 26,
 		group: "anim1",
 		filter: () => `blur(${rootStyle.getPropertyValue("--bg-advancedBlur").toString()})`
 	},
@@ -712,8 +712,9 @@ let allWallpaperOffStyle = {
 			width: "calc(0.4px * var(--bg-widthPhone))",
 			height: "calc(0.4px * var(--bg-widthPhone))",
 			translate: "0 calc((1px * var(--bg-widthPhone) - 0.4px * var(--bg-widthPhone)) / 2)",
-			borderRadius: "0px",
-			bottom: "calc(100% - calc(0.4px * var(--bg-widthPhone)))"
+			borderRadius: "5px",
+			bottom: "calc(100% - calc(0.4px * var(--bg-widthPhone)))",
+			filter: "blur(2.5px)"
 		},
 		bottomBtn: { opacity: "0" },
 		statusBar: { opacity: "0" },
@@ -730,7 +731,8 @@ let allWallpaperOffStyle = {
 			translate: "0 00%",
 			borderRadius: "calc(0.06px * var(--bg-widthPhone))",
 			scale: "0.825",
-			bottom: "50px"
+			bottom: "50px",
+			filter: "blur(2.5px)"
 		},
 		bottomBtn: { opacity: "0" },
 		statusBar: { opacity: "0" },
@@ -740,12 +742,13 @@ let allWallpaperOffStyle = {
 	2: {
 		wallpaperLock: {
 			bottom: "0px",
-			scale: "1.15",
+			scale: "1.215",
 			opacity: "0.8",
 			height: "100%",
 			width: "100%",
 			translate: "none",
-			borderRadius: "var(--bg-borderRadiusPhone)"
+			borderRadius: "var(--bg-borderRadiusPhone)",
+			filter: "blur(7.5px)"
 		},
 		bottomBtn: { opacity: "0" },
 		statusBar: { opacity: "0" },
@@ -783,7 +786,8 @@ let allWallpaperOnStyle = {
 			translate: "none",
 			borderRadius: "var(--bg-borderRadiusPhone)",
 			scale: "none",
-			opacity: "1"
+			opacity: "1",
+			filter: "blur(0)"
 		},
 		bottomBtn: { opacity: "1" },
 		statusBar: { opacity: "1" },

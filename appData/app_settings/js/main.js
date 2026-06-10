@@ -160,17 +160,17 @@ const functionWhenOpenAppInApp_settings = {
 						ctx.drawImage(img, 0, 0, canvas.width, canvas.height)
 
 						const compressed = canvas.toDataURL("image/jpeg", 0.75)
-						
+
 						const urlWallpaper = `url('${compressed}')`
-						
+
 						try {
-						localStorage.setItem("wallpaper", urlWallpaper)
-						setWallpaperOption(urlWallpaper)
+							localStorage.setItem("wallpaper", urlWallpaper)
+							setWallpaperOption(urlWallpaper)
 						} catch (e) {
-							console.log("error with execution of wallpaper or quota exceeded: \n"+e)
+							console.log("error with execution of wallpaper or quota exceeded: \n" + e)
 						}
 					}
-					img.src = ev.target.result;
+					img.src = ev.target.result
 				}
 				reader.readAsDataURL(file)
 			}
@@ -214,9 +214,7 @@ const functionWhenOpenAppInApp_settings = {
 		const container = document.getElementById("app_SettingsAppLockEditor")
 		container.querySelectorAll("[data-classToAdd][data-idNeedAdd]").forEach((el) => {
 			const handler = () => {
-				document
-					.getElementById(el.getAttribute("data-idNeedAdd"))
-					.classList.add(...el.getAttribute("data-classToAdd").trim().split(/\s+/))
+				document.getElementById(el.getAttribute("data-idNeedAdd")).classList.add(...el.getAttribute("data-classToAdd").trim().split(/\s+/))
 				container.querySelectorAll("[data-classToAdd][data-idNeedAdd]").forEach((e) => {
 					e.style.pointerEvents = "none"
 				})
@@ -227,9 +225,7 @@ const functionWhenOpenAppInApp_settings = {
 
 		container.querySelectorAll("[data-classToRemove][data-idNeedRemove]").forEach((el) => {
 			const handler = () => {
-				document
-					.getElementById(el.getAttribute("data-idNeedRemove"))
-					.classList.remove(...el.getAttribute("data-classToRemove").trim().split(/\s+/))
+				document.getElementById(el.getAttribute("data-idNeedRemove")).classList.remove(...el.getAttribute("data-classToRemove").trim().split(/\s+/))
 				container.querySelectorAll("[data-classToAdd][data-idNeedAdd]").forEach((e) => {
 					e.style.pointerEvents = ""
 				})
@@ -336,6 +332,9 @@ const functionWhenOpenAppInApp_settings = {
 				const color = e.currentTarget.style.backgroundColor
 				document.documentElement.style.setProperty("--bg-colorLockClock", color)
 				localStorage.setItem(`colorLockClock-${deviceType}`, color)
+				document.querySelectorAll(".lockClock").forEach((el) => {
+					//el.style.color = localStorage.getItem(`colorLockClock-${deviceType}`)
+				})
 				document.querySelectorAll("#app_SettingsAppLockEditor .colorCircle.active").forEach((activeCircle) => {
 					activeCircle.classList.remove("active")
 				})
@@ -504,9 +503,7 @@ const functionWhenOpenAppInApp_settings = {
 
 			localStorage.setItem("appcamerabtn", cameraBtn.dataset.appcamerabtn)
 
-			document
-				.querySelector("#app_SettingsAppActionBtn .box .borderPhonePre .buttonPreview svg path")
-				.setAttribute("d", e.target.dataset.path)
+			document.querySelector("#app_SettingsAppActionBtn .box .borderPhonePre .buttonPreview svg path").setAttribute("d", e.target.dataset.path)
 		}
 
 		elAllBtnCamera.forEach((el) => {
@@ -798,6 +795,7 @@ const functionWhenOpenAppInApp_settings = {
 		const heightPhoneEdit = app.querySelector('[name="heightPhoneEdit"]')
 		const widthPhoneEdit = app.querySelector('[name="widthPhoneEdit"]')
 		const borderRadiusPhoneEdit = app.querySelector('[name="borderRadiusPhoneEdit"]')
+		const clearToDefaultSettings = app.querySelector('[name="clearToDefaultSettings"]')
 
 		app.updateText = function () {
 			const rootStyle = getComputedStyle(root)
@@ -1215,6 +1213,8 @@ function setWallpaperOption(bgImg) {
 				darkerColorWallpaperLock = finalColor
 
 				document.documentElement.style.setProperty("--bg-colorLockClock", color)
+				//console.log(color)
+				//document.documentElement.style.setProperty("--bg-appbackground", finalColor)
 				document.querySelectorAll("#app_SettingsAppLockEditor .colorCircle.active").forEach((activeCircle) => {
 					activeCircle.classList.remove("active")
 				})
@@ -1229,6 +1229,19 @@ function setWallpaperOption(bgImg) {
 		overlay.classList.remove("openForWallpaper")
 		document.documentElement.style.setProperty("--bg-wallpaperHome", bgImg)
 		localStorage.setItem("wallpaperHome", bgImg)
+		{
+			const urlImg = getComputedStyle(document.documentElement)
+				.getPropertyValue("--bg-wallpaperLock")
+				.trim()
+				.replace(/url\(["']?(.*?)["']?\)/, "$1")
+
+			/*colorMediumImg(urlImg).then((color) => {
+				const finalColor = darkerOrBrighterColor(color, 0.5)
+				document.getElementById("colorMediumWallpaperButton").style.backgroundColor = color
+
+				/*document.documentElement.style.setProperty("--bg-appbackground", finalColor)
+			})*/
+		}
 	}
 	optionBox.querySelector('[data-buttonWallpaper="setForBothScreen"]').onclick = () => {
 		overlay.classList.remove("openForWallpaper")
@@ -1260,6 +1273,13 @@ function setWallpaperOption(bgImg) {
 				})
 				document.getElementById("colorMediumWallpaperButton").classList.add("active")
 				wallpaperLockColorPre.style.cssText = `background: linear-gradient( ${darkerColorWallpaperLock}, ${originColorWallpaperLock});`
+
+				/*document.documentElement.style.setProperty("--bg-appbackground", finalColor)
+				document.querySelectorAll(".app").forEach((el) => {
+					el.style.background = finalColor
+					el.style.background = "transparent"
+				})*/
+				//applyMonetTheme(color)
 			})
 		}
 		wallpaperLock.classList.remove("video")

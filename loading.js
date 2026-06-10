@@ -1,7 +1,11 @@
 const root = document.documentElement
 const rootStyle = getComputedStyle(root)
-let vst = "26.04",
-	vstt = "2604"
+let vst = "26.05"
+let vstt = "2605"
+/*window.vst = vst
+window.top.vst = vst
+window.vstt = vstt
+window.top.vstt = vstt*/
 
 let buildProp = {}
 
@@ -16,7 +20,7 @@ window.addEventListener("DOMContentLoaded", async () => {
 		console.error("Failed to load /OriginWEB-RayStered/init.js", err)
 	}
 })
-function formatSize(bytes) {
+function formatSize(bytes) {s
 	if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(2) + " KB"
 	return (bytes / 1024 / 1024).toFixed(2) + " MB"
 }

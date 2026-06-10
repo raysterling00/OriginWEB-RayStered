@@ -71,11 +71,12 @@
 
 .icon_element_red {
     height: 14px;
-    background: #f65268;
+    background: rgb(80, 60, 255);
     margin-right: 5px;
     margin-left: 10px;
     margin-bottom: 15px;
     flex: 0 0 4px;
+    border-radius: 20pc;
 }
 
 #rightBigTextNameDeviceInAbout {

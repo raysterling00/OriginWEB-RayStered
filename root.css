@@ -39,8 +39,8 @@
 	--icon-bg-size: 120%;
 	--icon-bg-size1x2: 124%;
 
-	--bg-wallpaperHome: url("/OriginWEB-RayStered//originData/wallpaper/wallpaper_2.png");
-	--bg-wallpaperLock: url("/OriginWEB-RayStered//originData/wallpaper/wallpaper_1.png");
+	--bg-wallpaperHome: url("/OriginWEB-RayStered/originData/wallpaper/wallpaper_2.png");
+	--bg-wallpaperLock: url("/OriginWEB-RayStered/originData/wallpaper/wallpaper_1.png");
 
 	--bg-colorForBackground: white;
 
@@ -69,8 +69,8 @@
 :root {
 	/*lock clock edit*/
 	--bg-lockClockTranslate: "";
-	--bg-colorLockClock: #ffffff;
-	--bg-fontLockClock: "Roboto Flex", sans-serif;
+	--bg-colorLockClock: #ddf;
+	--bg-fontLockClock: "Montserrat", sans-serif;
 	--bg-scaleLockContent: 1;
 	--bg-fontWeightLockClock: 500;
 	--bg-opacityLockClock: 30%;
@@ -296,10 +296,10 @@ nav {
 .liquid {
 	background: rgba(255, 255, 255, calc(var(--bg-liquidOpacity) + 10%));
 
-	backdrop-filter: brightness(0.98);
+	backdrop-filter: brightness(0.9);
 	box-shadow: inset 1px 1px 3px rgba(255, 255, 255, 0.3);
 	border-top: solid 1px rgba(255, 255, 255, 0.4);
-	border-bottom: solid 1px transparent;
+	border-bottom: solid 1px #ffffff01;
 	border-block: none;
 	border-inline: none;
 }
